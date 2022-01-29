@@ -1,0 +1,134 @@
+############################################################## 
+#	texturefile = "gfx/models/portraits/volus/volus1.dds"
+#	greeting_sound ="human_male_greetings_04" 
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+	hanar 	= {	entity = "portrait_fungoid_12_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "robot_human_greetings"	
+		character_textures = {
+			"gfx/models/portraits/hanar/hanar_fungoid_12.dds"
+		}
+	}
+	
+	mol7_fix = {	entity = "portrait_molluscoid_07_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/molluscoid/molluscoid_normal_07_blue_pink.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_normal_07_blue_red.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_normal_07_blue_orange.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_normal_07_black_orange.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_normal_07_black_red.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_normal_07_black_pink.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_normal_07_black_purple.dds"
+					"gfx/models/portraits/molluscoid/molluscoid_normal_07_black_blue.dds"
+			}
+	}
+}
+
+portrait_groups = {
+	hanar {
+		default = hanar
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					hanar
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					is_species = "Hanar"
+				}
+				portraits = {
+					hanar
+				}
+			}
+			add = {
+				trigger = { 
+					not = { 
+						is_species = "Hanar"
+					}
+				}
+				portraits = {
+					hanar
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					is_species = "Hanar"
+				}
+				portraits = {
+					hanar
+				}
+			}
+			add = {
+				trigger = { 
+					not = { 
+						is_species = "Hanar"
+					}
+				}
+				portraits = {
+					hanar
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					is_species = "Hanar"
+				}
+				portraits = {
+					hanar
+				}
+			}
+			add = {
+				trigger = { 
+					not = { 
+						is_species = "Hanar"
+					}
+				}
+				portraits = {
+					hanar
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					is_species = "Hanar"
+				}
+				portraits = {
+					hanar
+				}
+			}
+			add = {
+				trigger = { 
+					not = { 
+						is_species = "Hanar"
+					}
+				}
+				portraits = {
+					hanar
+				}
+			}
+		}
+	}
+}

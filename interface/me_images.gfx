@@ -1,0 +1,55 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_origin_migrant_fleet"
+		texturefile = "gfx/event_pictures/origins/origin_migrant_fleet.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_origin_omega"
+		texturefile = "gfx/event_pictures/origins/origin_omega.dds"
+		alwaystransparent = yes	
+	}
+	
+	spriteType = {
+		name = "GFX_origin_hesktok"
+		texturefile = "gfx/event_pictures/origins/origin_heshtok.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_reaper_tools"
+		texturefile = "gfx/event_pictures/origins/origin_reaper_tools.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_origin_shadow_organization"
+		texturefile = "gfx/event_pictures/origins/origin_shadow_organization.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_origin_morning_war"
+		texturefile = "gfx/event_pictures/origins/origin_morning_war.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+	    name = "GFX_origin_rannoch_accords"
+		texturefile = "gfx/event_pictures/origins/origin_rannoch_accords.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_origin_nexus_exiles"
+		texturefile = "gfx/event_pictures/origins/origin_nexus_exiles.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_origin_andromeda"
+		texturefile = "gfx/event_pictures/origins/origin_andromeda.dds"
+		alwaystransparent = yes
+	}		
+}

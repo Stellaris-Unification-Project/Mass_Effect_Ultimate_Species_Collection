@@ -1,0 +1,137 @@
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
+me_aru_system = {
+	name = "Aru"
+	class = "sc_g"
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 75
+	}
+	usage = custom_empire
+	
+	flags = { empire_home_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+	
+	planet = {
+		name = "Aru"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 23
+		has_ring = no
+	}
+	planet = {
+		name = "Jak Ser"
+		class = "pc_toxic"
+		size = 18
+		orbit_distance = 30
+		orbit_angle = random
+		has_ring = no
+		entity = "toxic_planet_02_entity"
+	}
+	planet = {
+		name = "Irune"
+		class = ideal_planet_class
+		orbit_distance = 25
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		home_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 3
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		name = "Locil"
+		class = "pc_gas_giant"
+		size = 28
+		orbit_distance = 45
+		orbit_angle = random
+		has_ring = no
+		entity = "gas_giant_01_entity"
+	}
+	planet = {
+		name = "Cherk Sab"
+		class = "pc_gas_giant"
+		size = 24
+		orbit_distance = 35
+		orbit_angle = random
+		has_ring = no
+		entity = "gas_giant_03_entity"
+	}
+	planet = {
+		name = "Doldit"
+		class = "pc_gas_giant"
+		size = 23
+		orbit_distance = 40
+		orbit_angle = random
+		has_ring = no
+		entity = "gas_giant_02_entity"
+	}
+	
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
+		initializer = "neighbor_t1_first_colony"
+	}
+}

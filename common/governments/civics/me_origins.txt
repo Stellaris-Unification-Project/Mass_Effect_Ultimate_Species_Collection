@@ -1,0 +1,220 @@
+origin_terminus_omega = {
+	is_origin = yes	
+	icon = "gfx/interface/civics/civic_omega.dds"
+	picture = GFX_origin_omega
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	
+	starting_colony = pc_habitat	
+	initializers = { me_sahrabarik_system }	
+	habitability_preference = pc_continental	
+	max_once_global = yes	
+	preferred_planet_class_neighbor = no
+	
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+		}
+	}
+	random_weight = { base = 1 }
+	modifier = {
+		pop_growth_from_immigration = 0.20
+		planet_jobs_unity_produces_mult = -0.1
+		edicts_cost_mult = 0.15
+		country_leader_pool_size = 4
+	}
+	description = origin_terminus_tooltip_effects
+}
+
+origin_migrant_fleet = {
+	is_origin = yes
+	icon = "gfx/interface/civics/civic_flotilla.dds"
+	picture = GFX_origin_migrant_fleet
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+		civics = { NOT = { value = civic_agrarian_idyll } }
+	}
+	
+	starting_colony = pc_habitat	
+	initializers = { custom_starting_init_01 }	
+	habitability_preference = pc_arid	
+	max_once_global = yes	
+	preferred_planet_class_neighbor = no
+	
+	possible = {
+		ethics = {
+		}
+		authority = {
+			OR = {
+				text = civic_tooltip_dem_oli
+				value = auth_democratic
+				value = auth_oligarchic
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		ships_upkeep_mult = -0.20
+		country_naval_cap_mult = 0.20
+		admiral_skill_levels = 2	
+		starbase_shipyard_build_cost_mult = -0.10
+		ship_hull_regen_add_perc = 1.0
+	}
+	description = origin_tooltip_migrant_fleet_effects
+}
+
+origin_heshtok = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/civics/civic_fanatic_purifiers.dds"
+	picture = GFX_origin_hesktok
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		terraforming_cost_mult = -0.30
+	}
+	description = origin_tooltip_hesktok_effects
+}
+
+origin_reaper_tools = {
+	is_origin = yes
+	icon = "gfx/interface/civics/civic_reaper.dds"
+	picture = GFX_reaper_tools
+	
+	starting_colony = pc_habitat	
+	initializers = { me_tartarus_system }	
+	habitability_preference = pc_habitat	
+	max_once_global = yes	
+	preferred_planet_class_neighbor = no
+	
+	potential = {
+		ethics = { value = ethic_gestalt_consciousness }
+	}
+	random_weight = { base = 0 }
+	
+	modifier = {		
+		all_technology_research_speed = 0.65
+		country_unity_produces_mult = -0.50
+		starbases_upkeep_mult = -0.50
+		num_tech_alternatives_add = 5
+	}
+	
+	description = origin_tooltip_reaper_tools_effects
+}
+
+origin_shadow_organization = {
+	is_origin = yes
+	icon = "gfx/interface/civics/civic_cerberus.dds"
+	picture = GFX_origin_shadow_organization
+	
+	starting_colony = pc_habitat	
+	initializers = { custom_starting_init_02 }	
+	habitability_preference = pc_continental	
+	max_once_global = yes	
+	preferred_planet_class_neighbor = no
+	
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_democratic } }
+	}
+	random_weight = { base = 0 }
+	modifier = {		
+		all_technology_research_speed = 0.05
+		country_starbase_influence_cost_mult = -0.50
+		edicts_cost_mult = -0.25
+		planet_jobs_upkeep_mult = 0.10
+	}
+	
+	description = origin_tooltip_shadow_organization_effects
+}
+
+origin_morning_war = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_separatists.dds"
+	picture = GFX_origin_morning_war
+	potential = {
+		ethics = { value = ethic_gestalt_consciousness }
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		megastructure_build_speed_mult = 0.20
+		country_resource_max_add = 15000
+		country_organic_trust_cap_add = -20
+		empire_size_penalty_mult = 0.15
+	}
+	description = origin_tooltip_morning_war_effects
+}
+
+origin_rannoch_alliance = {
+	is_origin = yes
+	icon = "gfx/interface/civics/civic_unification.dds"
+	picture = GFX_origin_rannoch_accords
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		ethics = {
+			NOR = {
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		country_unity_produces_mult = 0.15
+	}
+	
+	description = origin_tooltip_rannoch_alliance_effects
+}
+
+origin_andromeda_initiative = {
+	is_origin = yes
+	icon = "gfx/interface/civics/civic_initiative.dds"
+	picture = GFX_origin_andromeda
+	
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		ethics = {
+			NOR = {
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		all_technology_research_speed = 0.05
+		country_naval_cap_mult = -0.10
+		edicts_cost_mult = -0.20
+	}
+	
+	description = origin_tooltip_andromeda_initiative_effects
+}
+
+origin_nexus_exiles = {
+	is_origin = yes
+	icon = "gfx/interface/icons/governments/civics/civic_free_haven.dds"
+	picture = GFX_origin_nexus_exiles
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		ethics = {
+			NOR = {
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		planet_jobs_upkeep_mult = -0.20
+		edicts_cost_mult = 0.15
+		planet_stability_add = -10
+	}
+	
+	description = origin_tooltip_nexus_exiles_effects
+}

@@ -1,0 +1,640 @@
+###Events Activated On Start###
+
+namespace = masseffect
+
+# Terminus Systems Species Variety
+
+country_event = {
+	id = masseffect.1
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_terminus_omega
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = {
+			create_species = {
+				class="MassEffectBIO"
+				portrait="vorcha"
+				name="Vorcha"
+				plural="Vorcha"
+				adjective="Vorcha"
+				name_list="vorcha"
+				homeworld = this
+				traits = { 
+					trait="me_trait_vorcha_primitive"
+					trait="me_trait_vorcha_adaptation"
+				}
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}
+			create_species = {
+				class="MassEffectBIO"
+				portrait="batarian"
+				name="Batarian"
+				plural="Batarians"
+				adjective="Batarians"
+				name_list="batarian"
+				homeworld = this
+				traits = { 
+					trait="trait_decadent"
+					trait="trait_quarrelsome"
+					trait="me_trait_four_eyes"
+					trait="trait_conformists"
+				}
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}
+			create_species = {
+				class="MassEffectBIO"
+				portrait="krogan"
+				name="Krogan"
+				plural="Krogan"
+				adjective="Krogan"
+				name_list="krogan"
+				homeworld = this
+				traits = { 
+					trait="trait_survivor"
+					trait="me_trait_genophage"
+					trait="me_trait_violent_by_nature"
+					trait="me_trait_krogan_physiology"
+				}
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}
+			create_species = {
+				class="MassEffectBIO"
+				portrait="quarian"
+				name="Quarian"
+				plural="Quarians"
+				adjective="Quarian"
+				homeworld = this
+				name_list="quarian_names"
+				traits = { 
+					trait="me_trait_ship_bound"
+					trait="me_trait_keelahsalai"
+					trait="me_trait_dextro_immunity"
+				}
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}
+			create_species = {
+				class="MassEffectBIO"
+				portrait="turian"
+				name="Turian"
+				plural="Turians"
+				adjective="Turian"
+				name_list="turian_names"
+				homeworld = this
+				traits = { 
+					trait="me_trait_born_to_serve"
+					trait="me_trait_dextro_immunity"
+				}
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}
+			create_species = {
+				class="MassEffectBIO"
+				portrait="human"
+				name="Human"
+				plural="Humans"
+				adjective="Human"
+				name_list="alliance_names"
+				homeworld = this
+				traits = { 
+					trait="trait_wasteful"
+					trait="me_trait_humans_ambitious"
+				}
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}
+		}
+		capital_scope = {
+            while = {
+                random_pop = {
+                    limit = {
+                        has_trait = me_trait_asari_life
+                    }
+                    kill_pop = yes
+                }
+                count = 25
+            }
+        }
+		capital_scope = {
+			while = {
+				count = 5
+				create_pop = {
+					species = "Human"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 7
+				create_pop = {
+					species = "Krogan"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 8
+				create_pop = {
+					species = "Vorcha"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 9
+				create_pop = {
+					species = "Batarian"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 6
+				create_pop = {
+					species = "Turian"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 3
+				create_pop = {
+					species = "Quarian"
+				}
+			}
+		}
+	}
+}
+
+#Spawn Drell on Hanar Capital
+
+country_event = {
+	id = masseffect.2
+	hide_window = yes
+	
+	trigger = {
+		has_civic = civic_drell_compact
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = {
+			create_species = {
+				name = "Drell"
+				plural = "Drell"
+				class = "MassEffectBIO"
+				portrait = "drell"
+				homeworld = this
+				name_list = "drell"
+				traits = { 
+					trait = "me_trait_drell_compact"
+					trait = "me_trait_eidetic_memory"
+				}
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}			
+		}
+		capital_scope = {
+			while = {
+				count = 10
+				create_pop = {
+					species = "Drell"
+				}
+			}
+		}			
+	}
+}
+
+#Hesktok Modifiers
+
+country_event = {
+	id = masseffect.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { 
+		has_origin = origin_heshtok
+	}
+
+	immediate = {
+		random_owned_planet = {
+			limit = { is_capital = yes }
+			add_modifier = { modifier = "unstable_tectonics" days = -1 }
+			add_modifier = { modifier = "dangerous_wildlife" days = -1 }
+			add_modifier = { modifier = "bleak_planet" days = -1 }
+			add_modifier = { modifier = "mineral_rich" days = -1 }
+		}
+	}
+}
+
+#Migrant Fleet Spawn Ships
+
+#country_event = {
+	id = masseffect.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { 
+		has_civic = civic_migrant_fleet
+	}
+
+	immediate = {
+		capital_scope = {
+			create_fleet = {
+				name = "Migrant Fleet"
+				effect = {
+					set_owner = root.owner
+					set_location = {
+						target = this
+						distance = 10
+						angle = random
+					}
+					create_ship = {
+						name = Rayya
+						design = "NAME_AI_Core"
+						graphical_culture = "quar_01"
+					}
+					create_ship = {
+						name = Idenna
+						design = "NAME_AI_Core"
+						graphical_culture = "quar_01"
+					}
+					create_ship = {
+						name = Rayya
+						design = "NAME_AI_Core"
+						graphical_culture = "quar_01"
+					}
+					create_ship = {
+						name = Rayya
+						design = "NAME_AI_Core"
+						graphical_culture = "quar_01"
+					}
+					create_ship = {
+						name = Rayya
+						design = "NAME_AI_Core"
+						graphical_culture = "quar_01"
+					}
+					create_ship = {
+						name = Rayya
+						design = "NAME_AI_Core"
+						graphical_culture = "quar_01"
+					}
+					create_ship = {
+						name = Rayya
+						design = "NAME_AI_Core"
+						graphical_culture = "quar_01"
+					}
+					create_ship = {
+						name = Rayya
+						design = "NAME_AI_Core"
+						graphical_culture = "quar_01"
+					}
+					create_ship = {
+						name = Rayya
+						design = "NAME_AI_Core"
+						graphical_culture = "quar_01"
+					}
+				}
+			}
+		}
+	}
+}
+
+#Geth-Quarian Alliance Start
+
+country_event = {
+	id = masseffect.5
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_rannoch_alliance
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = {
+			create_species = {
+				name = "Upgraded Geth"
+				plural = "Geth"
+				class = "MassEffectROBOT"
+				portrait = "gethrobot"
+				homeworld = this
+				name_list = "geth"
+				traits = { 
+					trait = "me_trait_full_ai"
+					trait = "me_trait_reaper_code"
+					trait = "trait_robot_repurposed_hardware"
+					trait = "trait_robot_double_jointed"
+				}
+				sapient = yes
+				is_mod = no
+				immortal = yes
+			}			
+		}
+		capital_scope = {
+            while = {
+                random_pop = {
+                    limit = {
+                        has_trait = me_trait_dextro_immunity
+                    }
+                    kill_pop = yes
+                }
+                count = 9
+            }
+        }
+		capital_scope = {
+			while = {
+				count = 15
+				create_pop = {
+					species = "Upgraded Geth"
+				}
+			}
+		}
+		if = {
+			limit = { owner = { has_valid_civic = civic_rannoch_alliance } }
+			last_created_species = {
+				set_citizenship_type = {
+					country = root.owner
+					type = citizenship_full
+				}
+				set_military_service_type = {
+					country = root.owner
+					type = military_service_full
+				}
+			}
+		}
+		
+	}
+}
+
+#Andromeda Initiative Start
+
+#country_event = {
+	id = masseffect.6
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_andromeda_initiative
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = {
+			create_species = {
+				class="MassEffectBIO"
+				portrait="human"
+				name="Human"
+				plural="Humans"
+				adjective="Human"
+				name_list="alliance_names"
+					trait="me_trait_humans_ambitious"
+					trait="trait_wasteful"
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}			
+			create_species = {
+				class="MassEffectBIO"
+				portrait="turian"
+				name="Turian"
+				plural="Turians"
+				adjective="Turian"
+				name_list="turian_names"
+					trait="me_trait_born_to_serve"
+					trait="me_trait_dextro_immunity"
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}
+			create_species = {
+				class="MassEffectBIO"
+				portrait="krogan"
+				name="Krogan"
+				plural="Krogan"
+				adjective="Krogan"
+				name_list="krogan"
+					trait="trait_survivor"
+					trait="me_trait_genophage"
+					trait="me_trait_violent_by_nature"
+					trait="me_trait_krogan_physiology"
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}	
+			create_species = {
+				class="MassEffectBIO"
+				portrait="asari-republic"
+				name="Asari"
+				plural="Asari"
+				adjective="Asari"
+				name_list="HUM1"
+					trait="trait_deviants"
+					trait="me_trait_asari_life"
+					trait="trait_charismatic"
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}			
+		}
+		capital_scope = {
+            while = {
+                random_pop = {
+                    limit = {
+                        has_trait = me_trait_ritual_reproduction
+                    }
+                    kill_pop = yes
+                }
+                count = 18
+            }
+        }
+		capital_scope = {
+			while = {
+				count = 6
+				create_pop = {
+					species = "Asari"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 4
+				create_pop = {
+					species = "Krogan"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 6
+				create_pop = {
+					species = "Turian"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 6
+				create_pop = {
+					species = "Human"
+				}
+			}
+		}		
+	}
+}
+
+##Nexus Exiles Start
+#country_event = {
+	id = masseffect.7
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_nexus_exiles
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = {
+			create_species = {
+				class="MassEffectBIO"
+				portrait="salarian"
+				name="Salarian"
+				plural="Salarians"
+				adjective="Salarian"
+				name_list="salarian_names"
+				trait="me_trait_salarian_metabolism"
+				trait="me_trait_ritual_reproduction"
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}			
+			create_species = {
+				class="MassEffectBIO"
+				portrait="turian"
+				name="Turian"
+				plural="Turians"
+				adjective="Turian"
+				name_list="turian_names"
+				trait="me_trait_born_to_serve"
+				trait="me_trait_dextro_immunity"
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}
+			create_species = {
+				class="MassEffectBIO"
+				portrait="krogan"
+				name="Krogan"
+				plural="Krogan"
+				adjective="Krogan"
+				name_list="krogan"
+					trait="trait_survivor"
+					trait="me_trait_genophage"
+					trait="me_trait_violent_by_nature"
+					trait="me_trait_krogan_physiology"
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}	
+			create_species = {
+				class="MassEffectBIO"
+				portrait="asari-republic"
+				name="Asari"
+				plural="Asari"
+				adjective="Asari"
+				name_list="HUM1"
+					trait="trait_deviants"
+					trait="me_trait_asari_life"
+					trait="trait_charismatic"
+				sapient = yes
+				is_mod = no
+				immortal = no
+			}			
+		}
+		capital_scope = {
+            while = {
+                random_pop = {
+                    limit = {
+                        has_trait = me_trait_humans_ambitious
+                    }
+                    kill_pop = yes
+                }
+                count = 20
+            }
+        }
+		capital_scope = {
+			while = {
+				count = 4
+				create_pop = {
+					species = "Asari"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 6
+				create_pop = {
+					species = "Krogan"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 6
+				create_pop = {
+					species = "Turian"
+				}
+			}
+		}
+		capital_scope = {
+			while = {
+				count = 3
+				create_pop = {
+					species = "Salarian"
+				}
+			}
+		}		
+	}
+}
+
+#Morning War Start
+
+country_event = {
+	id = masseffect.8
+	hide_window = yes
+	
+	trigger = {
+		has_origin = origin_morning_war
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = {
+			while = {
+				count = 10
+				create_pop = {
+					species = "Geth"
+				}
+			}
+		}		
+	}
+}

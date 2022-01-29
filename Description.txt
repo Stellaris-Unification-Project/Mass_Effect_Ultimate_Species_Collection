@@ -1,0 +1,298 @@
+[h1]Welcome to the ultimate collection of Mass Effect species and namelists! [/h1]
+
+[img]https://www.syfy.com/sites/syfy/files/styles/1200x680/public/wire/legacy/MassEffectCompanions_hero_1920x1200.jpg[/img]
+
+[b]I have finally released my Mass Effect prescripted empires submod! It adds 16 new prescripted empires:[/b]
+-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1939823660] Mass Effect Ultimate Empire Collection[/url]
+
+This mod is a collection of every animated portrait currently available from the Mass Effect universe, as well as a bunch of bonus content from Mass Effect. Currently this mod includes animated portraits, name lists, and some extra species traits and rooms. This mod includes-
+
+[h1]18 Portraits[/h1]
+-Asari
+-Alliance
+-Cerberus
+-Turian
+-Salarian
+-Krogan
+-Volus
+-Elcor
+-Drell
+-Hanar
+-Collector
+-Thorian Creeper
+-Rachni
+-Geth
+-Loki Mech
+-Batarian
+-Vorcha
+-Quarian
+
+
+[h1]16 Name Lists[/h1]
+
+
+[h1]Dozens of New Icons[/h1]
+-Company logos
+-Nation emblems
+-And More
+
+
+[[h1]Many New Starting Systems[/h1]
+-Major Race home systems
+-Minor race systems
+-And More
+
+
+[h1]11 New Rooms[/h1]
+
+
+-[b]PLEASE NOTE, some of these traits and civics are very impactful and therefor inherently overpowered/punishing. This is required for every race to have a distinctive feel and playstyle.[/b]
+
+[h1]25 New Traits[/h1]
+-[b]Krogan Physiology (Krogan)[/b]
+--Leader Age +1200 years
+--Leader Cost +50%
+--Army Health +30%
+--Army Damage +30%
+--Pop Habitability +50%
+--Pop Mineral Production +15%
+--Pop Growth Speed +75%
+
+-[b]Violent by Nature (Krogan)[/b]
+--Pop Housing Usage +10%
+--Government Ethics Attraction -10%
+--Pop Amenities Usage +10%
+--Pop Ethics Shift Speed -25%
+
+-[b]The Genophage[/b]
+--Pop Growth Speed -85%
+--Pop Spiritualist Attraction +15%
+
+-[b]Born to Serve (Turian)[/b]
+--Government Ethics Attraction +30%
+--Pop Unity Production +10%
+--Army Morale +30%
+--General Skill Levels +2
+--Admiral Skill Levels +2
+
+-[b]Dextro-Protein Race (Turian/Quarian)[/b]
+--Pop Food Upkeep +10%
+--Pop Food Production -10%
+
+-[b]Keelah Se'lai (Quarian)[/b]
+--Government Ethics Attraction +20%
+--Pop Unity Production +20%
+--Ship Fire Rate +10%
+--Ship Fire Rate in Home Territory +20%
+--Army Morale +20%
+
+-[b]Ship-Bound (Quarian)[/b]
+--Pop Habitability -30%
+--Pop Amenities Usage -20%
+--Pop Housing Usage -20%
+--Pop Growth Speed -10%
+--Army Health -15%
+--Pop Engineering Research Production +20%
+
+-[b]Reaper Thralls (Collectors)[/b]
+--Pop Growth Speed -75%
+--Modify Species Cost -80%
+--Pop Resettlement Cost -80%
+--Government Ethics Attraction +100%
+--Pop Habitability +100%
+--Pop Food Upkeep -80%
+--Pop Housing Usage -75%
+--Pop Amenities Usage -75%
+
+-[b]Organic Quantum Entanglement (Rachni)[/b]
+--Pop Research Production +5%
+--Pop Unity Production +30%
+
+-[b]Giant Spiders (Rachni)[/b]
+--Pop Growth Speed +30%
+--Leader Age -40 years
+--Pop Amenities Usage +20%
+
+-[b]Individual Weakness (Geth)[/b]
+--Leader Upkeep +15%
+--Pop Assembly Speed -5%
+
+-[b]Four Eyes (Batarian)[/b]
+--Ship Weapon Accuracy +10%
+--Ship Weapon Range +10%
+--Pop Energy Production +15%
+
+-[b]Pressure Suits (Volus)[/b]
+--Army Damage -20%
+--Planet Worker Production -5%
+--Pop Habitability -5%
+
+-[b]Massive Stature (Elcor)[/b]	
+--Leader Age +300 years
+--Army Health +50%
+--Army Damage +20%
+--Pop Housing Usage +15%
+--Pop Growth Speed -10%
+--Pop Mineral Production +5%
+
+-[b]Sentient Jellyfish (Hanar)[/b]
+--Army Health -20%
+--Army Attack Damage -20%
+--Pop Worker Production -10%
+
+-[b]The Enkindlers (Hanar)[/b]
+--Pop Unity Production +30%
+--Pop Spiritualist Attraction +50%
+--Government Ethic Attraction +20%
+
+-[b]The Compact (Drell while client race of Hanr)[/b]
+--Pop Unity Production -10%
+--Pop Job Upkeep +5%
+
+-[b]Eidetic Memory (Drell)[/b]
+--Leader EXP Gain +30%
+--Pop Specializt Production +5%
+--Pop Amenities Usage -10%
+--Leader Skill Levels +2
+
+-[b]Vorcha Adaptation (Vorcha)[/b]
+--Leader Age -80 years
+--Pop Growth Speed +70%
+--Pop Habitability +50%
+--Army Health +20%
+--Pop Food Upkeep -20%
+--Pop Housing Usage -20%
+--Pop Amenities Usage -30%
+
+-[b]Primitive (Vorcha)[/b]
+--Pop Research Production -65%
+--Pop Unity Production -30%
+
+-[b]Salarian Metabolism (Salarian)[/b]
+--Leader Age -60 years
+--Pop Research Production +30%
+--Leader EXP Gain +30%
+--Leader Skill Levels +2
+
+-[b]Ritual Reproduction (Salarian)[/b]
+--Pop Growth Speed -5%
+--Leader Upkeep +10%
+
+-[b]Master Manipulators (Cerberus)[/b]
+--Pop Faction Influence +30%
+--Pop Amenities Usage -10%
+
+-[b]Very Ambitious (Humans/Cerberus)[/b]
+--Leader Skill Levels +2
+--Leader EXP Gain +25%
+--Mineral Production +20%
+--Energy Production +20%
+
+-[b]Asari Lifespan (Asari)[/b]
+--Leader Age +900 years
+--Leader Upkeep +50%
+--Leader EXP Gain -20%
+
+-[b]Partially Adapted (Quarians resettled on Rannoch)[/b]
+--Pop Habitability -15%
+--Army Health +10%
+--Pop Growth Speed -5%
+--Pop Happiness +5%
+
+-[b]Ship Based History (Quarians resettled on Rannoch) [/b] 
+--Pop Amenities Usage -15%
+--Pop Unity Production +25%
+--Pop Housing Usage -15%
+--Pop Growth from Immigration +15%
+--Pop Consumer Goods Upkeep -15%
+--Pop Government Ethics Attraction +25%
+
+-[b]Reaper Code (Post-War Geth)[/b]
+--Pop Research Production +10%
+--Planet Jobs Upkeep -20%
+
+
+[h1]4 New Civics [/h1]
+-[b]The Compact (Hanar [With Drell])[/b]
+--Will spawn several Drell pops on the starting planet
+
+-[b]Salarian STG (Salarians)[/b]
+--Naval Capacity -10%
+--Sensor Range +5
+--Planet Stability +10
+--Foreign Territory Claim Cost -50%
+
+-[b]Sleeper Agents (Cerberus)[/b]
+--Sensor Range +7
+--Country Influence Production +50%
+--Election Influence Cost +75%
+
+-[b]Shell Corporations (Cerberus)[/b]
+--Can build both Criminal AND Legitimate Branch Office Buildings
+--Crime on planets increases income of Criminal Branch Office Buildings
+--Trade Value +20%
+
+
+[h1]7 New Origins [/h1]
+-[b]The Rannoch Accords (Geth/Quarian Alliance)[/b]
+--Will spawn 15 upgraded Geth pops on the starting planet.
+--Can build Geth Factories to build more Geth pops
+--Country Unity Production +15%
+
+-[b]Heshtok Hellscape (Vorcha)[/b]
+--Will spawn 3 negative modifiers on the starting planet
+--Will spawn the Mineral Rich modifier on the starting planet
+--Terraforming Cost = -30%
+
+-[b]Heart of the Terminus (Omega)[/b]
+--Start with Habitats, as well as several other Mass Effect races on your capital
+--Pop Growth from Immigration +20%
+--Unity Production -10%
+--Edict Cost +15%
+--Leader Pool Size +4
+--Will spawn several other Mass Effect species on the starting planet
+
+-[b]Migrant Fleet (Quarians)[/b]
+--Start with Habitats
+--Ship Upkeep -20%
+--Naval Cap +20%
+--Starbase Build Cost -10%
+--Admiral Level Cap +2
+--Ship Hull Regen +1
+
+-[b]Tools of the Reapers (Collectors)[/b]
+--Start with Habitats
+--Research Speed +65%
+--Unity Production -50%
+--Starbase Upkeep -50%
+--Research Alternatives +5
+
+-[b]Shadow Organization (Cerberus)[/b]
+--Start with Habitats
+--Research Speed +5%
+--Starbase Influence Cost = -50%
+--Edists Cost -25%
+--Planet Jobs Upkeep +10%
+
+-[b]The Morning War (Geth)[/b]
+--10 Extra starting pops
+--Organics Trust Cap -20
+--Empire Resource Cap +10,000
+--Empire Size Penalty +15%
+
+[h1]1 New Government Type [/h1]
+-[b]Shell Corporations (Cerberus [Corporate Authority {Requires Shell Corporations Civic}])[/b]
+--This nation is founded on an extensive system of shell and dummy corporations which allow a wide range of income, from legitimate to illicit, while concealing the true profiteers from unwanted attention.
+
+
+[h1]In order to best recreate nations from the Mass Effect universe I recommend these additional mods-[/h1]
+-[url=https://steamcommunity.com/workshop/filedetails/?l=french&id=810948106] (-Mass Effect Shipsets NSC2-) [/url]
+-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=790903721] Mass Effect Civilisations - Asari [/url]
+
+
+[h1]Special Thanks to[/h1]
+-Guilliman (Guilli's Planet Modifiers)
+--Deathworlders Civic (basis for Heshtok civic [Vorcha])
+
+
+[h1]Dont forget to rate if you enjoy the mod![/h1]

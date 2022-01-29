@@ -1,0 +1,142 @@
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
+me_pranas_system = {
+	name = "Pranas"
+	class = "sc_g"
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 190
+	}
+	usage = custom_empire
+	
+	flags = { empire_home_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+	
+	planet = {
+		name = "Pranas"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 25
+		has_ring = no
+	}
+	planet = {
+		name = "Saradril"
+		class = "pc_molten"
+		size = 16
+		orbit_distance = 35
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Sur´Kesh"
+		class = ideal_planet_class
+		orbit_distance = 30
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		home_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+	}
+	planet = {
+		name = "Dragel"
+		class = "pc_barren_cold"
+		size = 7
+		orbit_distance = 45
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Halegeuse"
+		class = "pc_gas_giant"
+		orbit_distance = 45
+		orbit_angle = random
+		size = 25
+		starting_planet = no
+		has_ring = yes
+		entity = "gas_giant_05_entity"
+		modifiers = none
+	}
+	planet = {
+		name = "Paeto"
+		class = "pc_asteroid"
+		orbit_distance = 35
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
+		initializer = "neighbor_t1_first_colony"
+	}
+}

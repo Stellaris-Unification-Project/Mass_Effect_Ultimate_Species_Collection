@@ -1,0 +1,119 @@
+portraits = {
+	collector = {	entity = "portrait_reptilian_11_dontmove_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "arthropoid_01_greetings"	
+		character_textures = {
+			"gfx/models/portraits/collector/collector_reptilian_massive_11.dds"
+		}
+	}
+	
+	art15_fix = {	entity = "portrait_arthropoid_15_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "arthropoid_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/arthropoid/arthropoid_massive_15_purple_orange.dds"
+					"gfx/models/portraits/arthropoid/arthropoid_massive_15_blue_red.dds"
+					"gfx/models/portraits/arthropoid/arthropoid_massive_15_blue_orange.dds"
+					"gfx/models/portraits/arthropoid/arthropoid_massive_15_black_orange.dds"
+					"gfx/models/portraits/arthropoid/arthropoid_massive_15_black_red.dds"
+					"gfx/models/portraits/arthropoid/arthropoid_massive_15_black_blue.dds"
+			}
+	}
+}
+
+portrait_groups = {
+	collector {
+		default = collector
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					collector
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					is_species = "Collector"
+				}
+				portraits = {
+					collector
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Collector"
+					}
+				}
+				portraits = {
+					collector
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					is_species = "Collector"
+				}
+				portraits = {
+					collector
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Collector"
+					}
+				}
+				portraits = {
+					collector
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					is_species = "Collector"
+				}
+				portraits = {
+					collector
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { 
+						is_species = "Collector"
+					}
+				}
+				portraits = {
+					collector
+				}
+			}
+		}
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					is_species = "Collector"
+				}
+				portraits = {
+					collector
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { 
+						is_species = "Collector"
+					}
+				}
+				portraits = {
+					collector
+				}
+			}
+		}
+	}
+}

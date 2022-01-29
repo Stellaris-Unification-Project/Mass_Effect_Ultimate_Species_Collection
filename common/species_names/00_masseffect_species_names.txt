@@ -1,0 +1,124 @@
+#Random species names messing up with immersion, for example you can have ingame a IA salarian species with quarians appereance. So i have desactivated this file.
+old_MassEffect = {
+
+	Quarian = {
+		name = Quarian
+		plural = Quarians
+		home_planet = Rannoch
+		home_system = Xotranehika
+		name_list = "quarian_names"
+	}
+
+	Salarian = {
+		name = Salarian
+		plural = Salarians
+		home_planet = SurKesh
+		home_system = Pranas
+		name_list = "salarian_names"
+	}
+	
+	Turian = {
+		name = Turian
+		plural = Turians
+		home_planet = Palaven
+		home_system = Trebia
+		name_list = "turian_names"
+	}	
+	
+	Thorian = {
+		name = Thorian
+		plural = Thorian
+		home_planet = Feros
+		home_system = Theseus
+		name_list = "turian_names"
+	}	
+	
+	Krogan = {
+		name = Krogan
+		plural = Krogan
+		home_planet = Tuchanka
+		home_system = Aralakh
+		name_list = "turian_names"
+	}	
+	
+	Volus = {
+		name = Volus
+		plural = Volus
+		home_planet = Irune
+		home_system = Aru
+		name_list = "turian_names"
+	}	
+	
+	Vorcha = {
+		name = Vorcha
+		plural = Vorcha
+		home_planet = Heshtok
+		home_system = Kyzil
+		name_list = "turian_names"
+	}	
+
+	Rachni = {
+		name = Rachni
+		plural = Rachni
+		home_planet = Suen
+		home_system = Maskin Xul
+		name_list = "turian_names"
+	}	
+	
+	Hanar = {
+		name = Hanar
+		plural = Hanar
+		home_planet = Kahje
+		home_system = Nyahir
+		name_list = "turian_names"
+	}	
+	
+	Elcor = {
+		name = Elcor
+		plural = Elcor
+		home_planet = Irune
+		home_system = Aru
+		name_list = "turian_names"
+	}	
+	
+	Drell = {
+		name = Drell
+		plural = Drell
+		home_planet = Rakhana
+		home_system = Drell
+		name_list = "turian_names"
+	}	
+	
+	Collector = {
+		name = Collector
+		plural = Collectors
+		home_planet = Tartarus
+		home_system = Oculus
+		name_list = "turian_names"
+	}	
+	
+	Batarian = {
+		name = Batarian
+		plural = Batarians
+		home_planet = Khar'shan
+		home_system = Harsa
+		name_list = "turian_names"
+	}	
+	
+	Geth = {
+		name = Geth
+		plural = Geth
+		home_planet = Khar'shan
+		home_system = Harsa
+		name_list = "turian_names"
+	}	
+	
+	Loki = {
+		name = Loki
+		plural = Loki
+		home_planet = Khar'shan
+		home_system = Harsa
+		name_list = "turian_names"
+	}	
+	
+}

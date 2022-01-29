@@ -1,0 +1,12 @@
+on_game_start_country = {
+	events = {
+		masseffect.1					#Terminus Diversity Pop Spawn
+		masseffect.2					#Drell/Hanar Compact Spawn
+		masseffect.3					#Vorcha Heshtok Modifiers
+		masseffect.4					#Migrant Fleet Spawn Ships
+		masseffect.5					#Quarian-Geth Alliance Start
+		masseffect.6					#Andromeda Initiative Start
+		masseffect.7					#Nexus Exiles Start
+		masseffect.8					#Morning War Extra Pops
+	}
+}

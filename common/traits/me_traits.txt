@@ -1,0 +1,537 @@
+me_trait_krogan_physiology = {
+	cost = 6
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_fleeting" "trait_weak" "trait_nonadaptive" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_krogan.dds"
+	
+	leader_age_min = 200
+	leader_age_max = 700
+	
+	modifier = {
+		leader_age = 1200
+		leaders_cost_mult = 0.50
+		army_health = 0.30
+		army_damage_mult = 0.30
+		pop_environment_tolerance = 0.50
+		planet_jobs_minerals_produces_mult = 0.15
+		pop_growth_speed = 0.75
+	}	
+}
+
+me_trait_genophage = {
+	cost = -4
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_rapid_breeders" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_dna.dds"
+	
+	modifier = {
+		pop_growth_speed = -0.85
+		pop_ethic_spiritualist_attraction_mult = 0.15
+	}
+}
+
+me_trait_violent_by_nature = {
+	cost = -3
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_charismatic" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_renegade.dds"
+	
+	modifier = {
+		pop_housing_usage_mult = 0.10
+		pop_government_ethic_attraction = -0.10
+		pop_amenities_usage_mult = 0.10
+		pop_ethics_shift_speed_mult = -0.25
+	}
+}
+
+me_trait_born_to_serve = {
+	cost = 4
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_deviants" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_turian.dds"
+	
+	modifier = {
+		pop_government_ethic_attraction = 0.30
+		planet_jobs_unity_produces_mult = 0.10
+		army_morale = 0.30
+		general_skill_levels = 2
+		admiral_skill_levels = 2
+	}
+}
+
+me_trait_dextro_immunity = {
+	cost = -2
+	potential_crossbreeding_chance = 0.25
+	opposites = { }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_food.dds"
+	
+	modifier = {
+		planet_pops_food_upkeep_mult = 0.10
+		planet_jobs_food_produces_mult = -0.10
+	}
+}
+
+me_trait_keelahsalai = {
+	cost = 5
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_deviants" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_quarian.dds"
+	
+	modifier = {
+		pop_government_ethic_attraction = 0.20
+		planet_jobs_unity_produces_mult = 0.20
+		ship_fire_rate_mult = 0.10
+		ship_home_territory_fire_rate_mult = 0.20
+		army_morale = 0.20		
+	}
+}
+
+me_trait_ship_bound = { 
+	cost = -1
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_sedentary" "trait_wasteful" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_quarian_bad.dds"
+	
+	modifier = {
+		pop_environment_tolerance = -0.30
+		pop_amenities_usage_mult = -0.20
+		pop_growth_speed = -0.10
+		army_health = -0.15
+		planet_jobs_engineering_research_produces_mult = 0.20
+		pop_housing_usage_mult = -0.20
+	}
+}
+
+me_trait_reaper_slaves = { 
+	cost = 2
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_charismatic" "trait_rapid_breeders" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_reaper.dds"
+	modifier = {
+		pop_growth_speed = -0.75
+		modify_species_cost_mult = -0.80
+		pop_resettlement_cost_mult = -0.90	
+		pop_government_ethic_attraction = 1.0
+		pop_environment_tolerance = 1.0
+		planet_pops_food_upkeep_mult = -0.80
+		pop_housing_usage_mult = -0.75
+		pop_amenities_usage_mult = -0.75
+	}
+}
+
+me_trait_rachni_communication = { 
+	cost = 3
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_quarrelsome" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_telepathy.dds"
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.30
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+}
+
+me_trait_giant_spiders = { 
+	cost = -1
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_charismatic" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_rachni.dds"
+	
+	modifier = {
+		pop_growth_speed = 0.30
+		leader_age = -40
+		pop_amenities_usage_mult = 0.20
+	}
+}
+
+me_trait_individual_weakness = { 
+	cost = -1
+	allowed_archetypes = { ROBOT MACHINE }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_geth.dds"
+	
+	modifier = {
+		leaders_upkeep_mult = 0.15
+		planet_pop_assembly_mult = -0.05
+	}
+}
+
+me_trait_four_eyes = { 
+	cost = 2
+	potential_crossbreeding_chance = 0.25
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_batarian.dds"
+	
+	modifier = {
+		ship_accuracy_mult = 0.10
+		ship_weapon_range_mult = 0.10
+		planet_jobs_energy_produces_mult = 0.15
+	}
+}
+
+me_trait_pressure_suits = { 
+	cost = -2
+	potential_crossbreeding_chance = 0.25
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_volus.dds"
+	
+	modifier = {
+		army_damage_mult = -0.20
+		planet_jobs_worker_produces_mult = -0.05
+		pop_environment_tolerance = -0.05
+	}
+}
+
+me_trait_massive_stature = { 
+	cost = -1
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_fleeting" "trait_weak" "trait_rapid_breeders" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_elcor.dds"
+	
+	modifier = {
+		leader_age = 300
+		army_health = 0.50
+		army_damage_mult = 0.20	
+		pop_housing_usage_mult = 0.15
+		pop_growth_speed = -0.10
+		planet_jobs_minerals_produces_mult = 0.05
+	}
+}
+
+me_trait_sentient_jellyfish = { 
+	cost = -2
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_strong" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_hanar.dds"
+	
+	modifier = {
+		army_health = -0.20
+		army_attack_damage_mult = -0.20
+		planet_jobs_worker_produces_mult = -0.10		
+	}
+}
+
+me_trait_enkindlers = { 
+	cost = 3
+	potential_crossbreeding_chance = 0.25
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_prothean.dds"
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.30
+		pop_ethic_spiritualist_attraction_mult = 0.50
+		pop_government_ethic_attraction = 0.20
+	}
+}
+
+me_trait_drell_compact = { 
+	cost = -1
+	potential_crossbreeding_chance = 0.25
+	allowed_archetypes = { BIOLOGICAL }
+	modification = no
+	randomized = no
+	icon = "gfx/interface/traits/trait_drell.dds"
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = -0.10
+		planet_jobs_upkeep_mult = 0.05
+	}
+}
+
+me_trait_eidetic_memory = { 
+	cost = 3
+	potential_crossbreeding_chance = 0.25
+	opposites = { }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_brain.dds"
+	
+	modifier = {
+		species_leader_exp_gain = 0.30
+		planet_jobs_specialist_produces_mult = 0.05
+		pop_amenities_usage_mult = -0.10
+		leader_skill_levels = 2
+	}
+}
+
+me_trait_vorcha_adaptation = { 
+	cost = 6
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_nonadaptive" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_vorcha.dds"
+	
+	modifier = {
+		leader_age = -50
+		pop_growth_speed = 0.70
+		pop_environment_tolerance = 0.50
+		army_health = 0.20
+		planet_pops_food_upkeep_mult = -0.50
+		pop_housing_usage_mult = -0.50
+		pop_amenities_usage_mult = -0.50
+	}
+}
+
+me_trait_vorcha_primitive = { 
+	cost = -4
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_intelligent" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/icons/traits/trait_repugnant.dds"
+	
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = -0.65
+		planet_jobs_physics_research_produces_mult = -0.65
+		planet_jobs_society_research_produces_mult = -0.65
+		planet_jobs_unity_produces_mult = -0.30
+	}
+}
+
+me_trait_salarian_metabolism = { 
+	cost = 3
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_slow_learners" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_salarian.dds"
+	
+	modifier = {
+		leader_age = -40
+		planet_jobs_engineering_research_produces_mult = 0.30
+		planet_jobs_physics_research_produces_mult = 0.30
+		planet_jobs_society_research_produces_mult = 0.30
+		species_leader_exp_gain = 0.30
+		leader_skill_levels = 2
+	}
+}
+
+me_trait_ritual_reproduction = {
+	cost = -1
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_rapid_breeders" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/icons/traits/trait_social_pheromones.dds"
+	
+	modifier = {
+		pop_growth_speed = -0.05
+		leaders_upkeep_mult = 0.10
+	}
+}
+
+me_trait_manipulators = {
+	cost = 1
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_repugnant" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/icons/traits/trait_traditional.dds"
+	
+	modifier = {
+		pop_factions_produces_mult = 0.30
+		pop_amenities_usage = -0.10
+	}
+}
+
+me_trait_humans_ambitious = {
+	cost = 3
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_sedentary" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_paragon.dds"
+	
+	modifier = {
+		leader_skill_levels = 2
+		species_leader_exp_gain = 0.25
+		planet_jobs_minerals_produces_mult = 0.20
+		planet_jobs_energy_produces_mult = 0.20
+	}
+}
+
+me_trait_asari_life = {
+	cost = 1
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_fleeting" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_asari.dds"
+	
+	modifier = {
+		leader_age = 900
+		leaders_upkeep_mult = 0.50
+		species_leader_exp_gain = -0.20
+	}
+}
+
+me_trait_reaper_code = {
+	cost = 3
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_fleeting" }
+	allowed_archetypes = { ROBOT }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_geth_good.dds"
+	
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.10
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_upkeep_mult = -0.20
+	}
+}
+
+me_trait_full_ai = {
+	cost = -2
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_fleeting" }
+	allowed_archetypes = { ROBOT } 
+	modification = no
+	randomized = no
+	icon = "gfx/interface/traits/trait_ai.dds"
+	
+	modifier = {
+		pop_happiness = 1.0
+		planet_pops_consumer_goods_upkeep_mult = -2.0
+		pop_environment_tolerance = 2.0
+		leader_age = 2000
+	}
+}
+
+me_trait_partially_adapted = {
+	cost = -3
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_adaptive" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/icons/traits/trait_nonadaptive.dds"
+	
+	modifier = {
+		pop_environment_tolerance = -0.15
+		army_health = -0.10
+		pop_growth_speed = -0.05
+		pop_happiness = 0.05
+	}
+}
+
+me_trait_ship_based_history = {
+	cost = 5
+	potential_crossbreeding_chance = 0.25
+	opposites = { "trait_wasteful" "trait_quarrelsome" }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/icons/traits/trait_nomadic.dds"
+	
+	modifier = {
+		pop_amenities_usage_mult = -0.15
+		planet_pops_consumer_goods_upkeep_mult = -0.15
+		planet_pop_housing_usage_mult = -0.15
+		planet_jobs_unity_produces_mult = 0.25
+		pop_growth_from_immigration = 0.15
+		pop_resettlement_cost_mult = -0.30
+		pop_government_ethic_attraction = 0.25
+	}
+}
+
+me_trait_bioelectrical_field = {
+	cost = 1
+	potential_crossbreeding_chance = 0.25
+	opposites = {  }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_angara_bad.dds"
+	
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.10
+		pop_amenities_usage_mult = -0.10		
+	}
+}
+
+me_trait_electromagnetic = {
+	cost = -2
+	potential_crossbreeding_chance = 0.25
+	opposites = {  }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/traits/trait_angara.dds"
+	
+	modifier = {
+		planet_jobs_upkeep_mult = 0.10
+		planet_pop_housing_usage_mult = 0.15
+	}
+}
+
+me_trait_emotional = {
+	cost = 3
+	potential_crossbreeding_chance = 0.25
+	opposites = {  }
+	allowed_archetypes = { BIOLOGICAL }
+	modification = yes
+	randomized = no
+	icon = "gfx/interface/icons/traits/trait_traditional.dds"
+	
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.20
+		pop_happiness = 0.10
+		planet_jobs_unity_produces_mult = 0.15
+	}
+}

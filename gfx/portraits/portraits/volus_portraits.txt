@@ -1,0 +1,331 @@
+############################################################## 
+#	texturefile = "gfx/models/portraits/volus/volus1.dds"
+#	greeting_sound ="human_male_greetings_04" 
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+	# Volus
+	
+	volus_male = {	entity = "portrait_reptilian_14_dontmove_entity"	clothes_selector = "me_no_clothes" hair_selector = "no_texture"	greeting_sound = "humanoid_portrait_f_male"	
+		character_textures = {
+			"gfx/models/portraits/volus/volus_reptilian_massive_14.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_blue.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_green.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_purple.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_red.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_yellow.dds"
+		}
+	}
+	
+	volus_female = {	entity = "portrait_reptilian_14_dontmove_entity"	clothes_selector = "me_no_clothes" hair_selector = "no_texture"	greeting_sound = "humanoid_portrait_f_female"	
+		character_textures = {
+			"gfx/models/portraits/volus/volus_reptilian_massive_14.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_blue.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_green.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_purple.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_red.dds"
+			"gfx/models/portraits/volus/volus_reptilian_massive_14_yellow.dds"
+		}
+	}
+	
+	volus_biotic_god = {	entity = "portrait_reptilian_14_dontmove_entity"	clothes_selector = "me_no_clothes" hair_selector = "no_texture"	greeting_sound = "humanoid_portrait_f_male"	
+		character_textures = {
+			"gfx/models/portraits/volus/volus_biotic_god_reptilian_massive_14.dds"
+			"gfx/models/portraits/volus/volus_biotic_god_reptilian_massive_14_redeyes.dds"
+			"gfx/models/portraits/volus/volus_biotic_god_reptilian_massive_14_yelloweyes.dds"
+			"gfx/models/portraits/volus/volus_biotic_god_reptilian_massive_14_blueeyes.dds"
+		}
+	}
+	
+	volus_biotic_goddess = {	entity = "portrait_reptilian_14_dontmove_entity"	clothes_selector = "me_no_clothes" hair_selector = "no_texture"	greeting_sound = "humanoid_portrait_f_female"	
+		character_textures = {
+			"gfx/models/portraits/volus/volus_biotic_god_reptilian_massive_14.dds"
+			"gfx/models/portraits/volus/volus_biotic_god_reptilian_massive_14_redeyes.dds"
+			"gfx/models/portraits/volus/volus_biotic_god_reptilian_massive_14_yelloweyes.dds"
+			"gfx/models/portraits/volus/volus_biotic_god_reptilian_massive_14_blueeyes.dds"
+		}
+	}
+	
+	mam2_fix = {	entity = "portrait_mammalian_02_entity" clothes_selector = "mammalian_slender_02_clothes_01" hair_selector = "no_texture" 
+		greeting_sound = "mammalian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/mammalian/mammalian_slender_02_blue.dds"
+			"gfx/models/portraits/mammalian/mammalian_slender_02_blue.dds"
+			"gfx/models/portraits/mammalian/mammalian_slender_02_purple.dds"
+			"gfx/models/portraits/mammalian/mammalian_slender_02_pink.dds"
+			"gfx/models/portraits/mammalian/mammalian_slender_02_black.dds"
+			"gfx/models/portraits/mammalian/mammalian_slender_02_white.dds"
+		}	
+	}
+}
+
+portrait_groups = {
+	volus {
+		default = volus_male
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					volus_male
+					volus_biotic_god
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					volus_female
+					volus_biotic_goddess
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					is_species = "Volus"
+				}
+				portraits = {
+					volus_male
+					volus_female
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Volus"
+					}
+				}
+				portraits = {
+					volus_male
+					volus_female
+				}
+			}
+		}	
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					is_species = "Volus"
+					has_living_standard	= {
+						country = owner
+						type = living_standard_chemical_bliss
+					}
+				}
+				portraits = {
+					volus_biotic_god
+					volus_biotic_goddess
+				}
+			}
+			add = {
+				trigger = {
+					is_species = "Volus"
+					Not = {
+						has_living_standard	= {
+							country = owner
+							type = living_standard_chemical_bliss
+						}
+					}
+				}
+				portraits = {
+					volus_male
+					volus_female
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Volus"
+					}
+				}
+				portraits = {
+					volus_male
+					volus_female
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = male
+					is_species = "Volus"
+					NOR = {
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_governor_psionic
+						has_trait = leader_trait_governor_chosen
+						has_trait = leader_trait_expertise_psionics
+						has_trait = leader_trait_scientist_psionic
+						has_trait = leader_trait_scientist_chosen
+						has_trait = leader_trait_admiral_psionic
+						has_trait = leader_trait_admiral_chosen
+						has_trait = leader_trait_general_psionic
+						has_trait = leader_trait_general_chosen
+					}
+				}
+				portraits = {
+					volus_male
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					is_species = "Volus"
+					NOT = {
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_governor_psionic
+						has_trait = leader_trait_governor_chosen
+						has_trait = leader_trait_expertise_psionics
+						has_trait = leader_trait_scientist_psionic
+						has_trait = leader_trait_scientist_chosen
+						has_trait = leader_trait_admiral_psionic
+						has_trait = leader_trait_admiral_chosen
+						has_trait = leader_trait_general_psionic
+						has_trait = leader_trait_general_chosen
+					}
+				}
+				portraits = {
+					volus_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					is_species = "Volus"
+					OR = {
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_governor_psionic
+						has_trait = leader_trait_governor_chosen
+						has_trait = leader_trait_expertise_psionics
+						has_trait = leader_trait_scientist_psionic
+						has_trait = leader_trait_scientist_chosen
+						has_trait = leader_trait_admiral_psionic
+						has_trait = leader_trait_admiral_chosen
+						has_trait = leader_trait_general_psionic
+						has_trait = leader_trait_general_chosen
+					}
+				}
+				portraits = {
+					volus_biotic_god
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					is_species = "Volus"
+					OR = {
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_governor_psionic
+						has_trait = leader_trait_governor_chosen
+						has_trait = leader_trait_expertise_psionics
+						has_trait = leader_trait_scientist_psionic
+						has_trait = leader_trait_scientist_chosen
+						has_trait = leader_trait_admiral_psionic
+						has_trait = leader_trait_admiral_chosen
+						has_trait = leader_trait_general_psionic
+						has_trait = leader_trait_general_chosen
+					}
+				}
+				portraits = {
+					volus_biotic_goddess
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Volus"
+					}
+				}
+				portraits = {
+					volus_male
+					volus_female
+				}
+			}
+		}
+
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = male
+					is_species = "Volus"
+					NOT = {
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_ruler_psionic
+						has_trait = leader_trait_ruler_chosen
+					}
+				}
+				portraits = {
+					volus_male
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					is_species = "Volus"
+					NOT = {
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_ruler_psionic
+						has_trait = leader_trait_ruler_chosen
+					}
+				}
+				portraits = {
+					volus_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					is_species = "Volus"
+					OR = {
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_ruler_psionic
+						has_trait = leader_trait_ruler_chosen
+					}
+				}
+				portraits = {
+					volus_biotic_god
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					is_species = "Volus"
+					OR = {
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_ruler_psionic
+						has_trait = leader_trait_ruler_chosen
+					}
+				}
+				portraits = {
+					volus_biotic_goddess
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Volus"
+					}
+				}
+				portraits = {
+					volus_male
+					volus_female
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,140 @@
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
+me_harsa_system = {
+	name = "Harsa"
+	class = "sc_g"
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 115
+	}
+	usage = custom_empire
+	
+	flags = { empire_home_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+	
+	planet = {
+		name = "Harsa"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 21
+		has_ring = no
+	}
+	planet = {
+		name = "Dezda"
+		class = "pc_molten"
+		size = 8
+		orbit_distance = 65
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Khar'shan"
+		class = ideal_planet_class
+		orbit_distance = 30
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		home_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 3
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		name = "Verush"
+		class = "pc_gas_giant"
+		orbit_distance = 35
+		orbit_angle = random
+		size = 22
+		has_ring = yes
+		entity = "gas_giant_01_entity"
+		modifiers = none
+		
+		moon = {
+			name = "Bira"
+			class = "pc_barren_cold"
+			size = 5
+			orbit_distance = 15
+			orbit_angle = random
+			has_ring = no
+		}
+		
+		moon = {
+			name = "Cirna"
+			class = "pc_barren_cold"
+			size = 3
+			orbit_distance = 7
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	planet = {
+		name = "Ilem"
+		class = "pc_barren_cold"
+		size = 10
+		orbit_distance = 45
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Spekilas"
+		class = "pc_barren_cold"
+		orbit_distance = 35
+		orbit_angle = random
+		size = 21
+		has_ring = no
+		modifiers = none
+	}
+	
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
+		initializer = "neighbor_t1_first_colony"
+	}
+}

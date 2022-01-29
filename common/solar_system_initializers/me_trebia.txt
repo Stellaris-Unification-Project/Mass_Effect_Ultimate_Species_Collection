@@ -1,0 +1,154 @@
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
+me_trebia_system = {
+	name = "Trebia"
+	class = "sc_f"
+	usage = custom_empire
+	
+	flags = { empire_home_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+	
+	planet = {
+		name = "Trebia"
+		class = "pc_f_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 17
+		has_ring = no
+	}
+	planet = {
+		name = "Aventen"
+		class = "pc_molten"
+		size = 13
+		orbit_distance = 25
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Caelax"
+		class = "pc_molten"
+		size = 10
+		orbit_distance = 25
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Palavan"
+		class = ideal_planet_class
+		orbit_distance = 35
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		home_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		
+		moon = {
+			name = "Menae"
+			class = "pc_barren"
+			size = 4
+			orbit_distance = 9
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	planet = {
+		name = "Impera"
+		class = "pc_molten"
+		size = 7
+		orbit_distance = 40
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Essenus"
+		class = "pc_gas_giant"
+		orbit_distance = 35
+		orbit_angle = random
+		size = 20
+		starting_planet = no
+		has_ring = no
+		entity = "gas_giant_05_entity"
+	}
+	planet = {
+		name = "Datriux"
+		class = "pc_barren_cold"
+		size = 15
+		orbit_distance = 40
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 15
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 3
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
+		initializer = "neighbor_t1_first_colony"
+	}
+}

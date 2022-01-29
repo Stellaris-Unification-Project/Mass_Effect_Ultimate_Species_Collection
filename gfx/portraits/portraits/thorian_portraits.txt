@@ -1,0 +1,115 @@
+portraits = {
+	creeper	= {	entity = "humanoid_02_male_01_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "reptilian_01_greetings" 
+		character_textures = {
+			"gfx/models/portraits/thorian/creeper_humanoid_02_male_body_01.dds"
+		}
+	}
+	
+	fun4_fix = {	entity = "portrait_fungoid_04_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "fungoid_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/fungoid/fungoid_04_teal_red_purple.dds"
+					"gfx/models/portraits/fungoid/fungoid_04_teal_brown_purple.dds"
+					"gfx/models/portraits/fungoid/fungoid_04_teal_blond_purple.dds"
+					"gfx/models/portraits/fungoid/fungoid_04_teal_black.dds"
+					"gfx/models/portraits/fungoid/fungoid_04_blue_black.dds"
+					"gfx/models/portraits/fungoid/fungoid_04_blue_blond_purple.dds"
+					"gfx/models/portraits/fungoid/fungoid_04_blue_brown_purple.dds"
+					"gfx/models/portraits/fungoid/fungoid_04_blue_red_purple.dds"
+			}
+	}
+}
+
+portrait_groups = {
+	thorian {
+		default = creeper
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					creeper
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					is_species = "Thorian Creeper"
+				}
+				portraits = {
+					creeper
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Thorian Creeper"
+					}
+				}
+				portraits = {
+					creeper
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					is_species = "Thorian Creeper"
+				}
+				portraits = {
+					creeper
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { is_species = "Thorian Creeper"}
+				}
+				portraits = {
+					creeper
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					is_species = "Thorian Creeper"
+				}
+				portraits = {
+					creeper
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { is_species = "Thorian Creeper"}
+				}
+				portraits = {
+					creeper
+				}
+			}
+		}
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					is_species = "Thorian Creeper"
+				}
+				portraits = {
+					creeper
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { is_species = "Thorian Creeper"}
+				}
+				portraits = {
+					creeper
+				}
+			}
+		}
+	}
+}
