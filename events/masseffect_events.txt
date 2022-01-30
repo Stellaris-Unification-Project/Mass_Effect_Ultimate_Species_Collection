@@ -120,7 +120,7 @@ country_event = {
 		}
 		capital_scope = {
             while = {
-                random_pop = {
+                random_owned_pop = {
                     limit = {
                         has_trait = me_trait_asari_life
                     }
@@ -350,7 +350,7 @@ country_event = {
 		}
 		capital_scope = {
             while = {
-                random_pop = {
+                random_owned_pop = {
                     limit = {
                         has_trait = me_trait_dextro_immunity
                     }
@@ -456,7 +456,7 @@ country_event = {
 		}
 		capital_scope = {
             while = {
-                random_pop = {
+                random_owned_pop = {
                     limit = {
                         has_trait = me_trait_ritual_reproduction
                     }
@@ -571,7 +571,7 @@ country_event = {
 		}
 		capital_scope = {
             while = {
-                random_pop = {
+                random_owned_pop = {
                     limit = {
                         has_trait = me_trait_humans_ambitious
                     }
